@@ -6,8 +6,8 @@
 <template>
   <el-container class="preview">
     <el-header class="preview-header">
-      <span class="company-name">温州叶同仁控股有限公司</span>
-      <span class="intro">{{ title }}</span>
+      <span class="company-name">温州全亿医药有限公司</span>
+      <span class="intro">黄葵胶囊、蒲参胶囊流向查询：<span style="color: red">2022年01月-2022年09月</span></span>
       <span class="quit">退出</span>
       <span class="first-page">首页</span>
     </el-header>
@@ -16,33 +16,33 @@
         <el-menu default-active="1" class="el-menu-vertical">
           <el-menu-item index="1">
             <i class="el-icon-location"></i>
-            <span slot="title">流向查询</span>
+            <span slot="title" class="slide-title">流向查询</span>
           </el-menu-item>
           <el-menu-item index="2">
             <i class="el-icon-menu"></i>
-            <span slot="title">用户中心</span>
+            <span slot="title" class="slide-title">用户中心</span>
           </el-menu-item>
           <el-menu-item index="3">
             <i class="el-icon-document"></i>
-            <span slot="title">产品管理</span>
+            <span slot="title" class="slide-title">产品管理</span>
           </el-menu-item>
           <el-menu-item index="4">
             <i class="el-icon-setting"></i>
-            <span slot="title">系统设置</span>
+            <span slot="title" class="slide-title">系统设置</span>
           </el-menu-item>
         </el-menu>
       </el-aside>
       <el-main>
-        <el-table :data="tableData" style="width: calc(">
-          <el-table-column prop="A" label="制单日期" min-width="100"> </el-table-column>
-          <el-table-column prop="B" label="票据类型" min-width="80"> </el-table-column>
-          <el-table-column prop="C" label="商品编码" min-width="80"> </el-table-column>
-          <el-table-column prop="D" label="商品名称" min-width="100"> </el-table-column>
-          <el-table-column prop="E" label="规格" min-width="80"> </el-table-column>
-          <el-table-column prop="F" label="生产企业" min-width="150"> </el-table-column>
+        <el-table :data="tableData" style="font-size: 18px">
+          <el-table-column prop="A" label="商品编号" min-width="100"> </el-table-column>
+          <el-table-column prop="B" label="商品名称" min-width="100"> </el-table-column>
+          <el-table-column prop="C" label="规格" min-width="120"> </el-table-column>
+          <el-table-column prop="D" label="生产厂家" min-width="200"> </el-table-column>
+          <el-table-column prop="E" label="单位" min-width="80"> </el-table-column>
+          <el-table-column prop="F" label="数量" min-width="80"> </el-table-column>
           <el-table-column prop="G" label="批号" min-width="100"> </el-table-column>
-          <el-table-column prop="H" label="往来单位" min-width="160"> </el-table-column>
-          <el-table-column prop="I" label="支出数量" min-width="80"> </el-table-column>
+          <el-table-column prop="H" label="门店名称" min-width="180"> </el-table-column>
+          <el-table-column prop="I" label="开票日期" min-width="120"> </el-table-column>
         </el-table>
       </el-main>
     </el-container>
@@ -101,24 +101,27 @@ export default {
     color: white;
     .company-name {
       color: #eee;
-      font-size: 18px;
+      font-size: 24px;
     }
     .intro {
       position: absolute;
       left: 50%;
       transform: translate(-50%);
-      font-size: 12px;
+      font-size: 18px;
     }
     .first-page,
     .quit {
       float: right;
       margin-left: 10px;
-      font-size: 14px;
+      font-size: 18px;
       color: #eee;
     }
   }
   .el-main {
     padding: 0;
+  }
+  .slide-title {
+    font-size: 18px;
   }
 }
 </style>
